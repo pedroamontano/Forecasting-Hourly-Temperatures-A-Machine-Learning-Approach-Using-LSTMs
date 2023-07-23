@@ -1,9 +1,0 @@
-What is one area of interest you have for the capstone?
-Financial Services:
-	Credit Reporting - How does a CC APR get calculated and why do people with good credit get a high one?
-	Automated Trading - Super cool idea, there are a few trading funds out there ran by AI that are doing pretty good.
-What is the potential business value of this idea / area?
-Credit repearing companies (maybe Credit Karma too) may be interested in this to be able to guide their customers to a lower APR/credit repairing.
-Improving the current AI trading funds or creating new models?
-
-Research if all finance companies are long hours.
