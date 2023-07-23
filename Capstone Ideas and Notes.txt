@@ -1,0 +1,27 @@
+US Traffic Data dataset was being used by another classmate, so I had to find a new one. The dataset I found is for the weather measurements in Vancouver recorded hourly for the past 90,000 hours (10 years).
+
+I am hoping to find trends in the data for the temperatures, specially for the heat in the summer. Perhaps the hot temperatures we have been experiencing happened a few years back. The current independent variable is temperature, but this will be confirmed after the Basic EDA.
+
+
+https://www.weatherstats.ca/faq/#term-wind-direction
+
+Data Cleaning with Excel:
+1. Consolidated and converted cloud cover columns into one.
+2. Filled in blank values for wind_dir column based on the degrees stated on wind_dir_10s.
+3. Removed unixtime column because its redundant, we already have a datetime column.
+4. Removed Solar Radiation, column was empty for the data set.
+
+Notes for Python Cleaning:
+- Wind_gust empty values suggest there was no wind gust that hour.
+- Wind chill empty values can be filled with 0 if the missing values correspond to days when it is not cold.
+- Wind dir and wind dir 10 values can be assumed to be 0 or null, no wind was recorded.
+- Will need to be back or front filled:
+	+ Relative_humidity
+	+ dew_point
+	+ temperature 
+	+ humidex
+	+ visibility
+	+ air quality index
+	+ max air temp
+	+ min air temp  
+
