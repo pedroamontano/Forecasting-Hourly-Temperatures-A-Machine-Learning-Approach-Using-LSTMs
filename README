@@ -1,4 +1,4 @@
 - [X] Confirmed Dataset "Vancouver Climate Hourly"
-- [ ] Preliminary cleanup through Excel.
+- [X] Preliminary cleanup through Excel.
 - [ ] Additional data cleaning through Python.
 - [ ] Basic EDA
