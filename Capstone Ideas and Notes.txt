@@ -1,25 +1,24 @@
-US Traffic Data dataset was being used by another classmate, so I had to find a new one. The dataset I found is for the weather measurements in Vancouver recorded hourly for the past 90,000 hours (10 years).
+US Traffic Data dataset was being used by another classmate, so I had to find a new one. The dataset I found is for the weather measurements in Vancouver recorded hourly for the past 90,000 hours (10 years). 
 
 I am hoping to find trends in the data for the temperatures, specially for the heat in the summer. Perhaps the hot temperatures we have been experiencing happened a few years back. The current independent variable is temperature, but this will be confirmed after the Basic EDA.
 
-
 https://www.weatherstats.ca/faq/#term-wind-direction
 
+
 Data Cleaning with Excel:
-1. Consolidated and converted cloud cover columns into one.
-2. Filled in blank values for wind_dir column based on the degrees stated on wind_dir_10s.
-3. Removed unixtime column because its redundant, we already have a datetime column.
-4. Removed Solar Radiation, column was empty for the data set.
+1. Adjusted the Data to start from Midnight of July 1st, 2013 through June 30, 2023.
+2. Removed cloud_cover_4 and cloud_cover_10 columns because they were empty. Changed name of cloud_cover_8 to cloud_okta for clarity. (An okta is a measurement of cloud cover)
+3. Filled in blank values for wind_dir column based on the degrees stated on wind_dir_10s. Entered "None" in wind_dir column for rows without wind speed, but its not possible to fill the corresponding empty wind_dir_10s cells without entering 0 (which is North and would add a wind direction when there is none) or entering an "N/A" which would make the column an object type.
+4. Removed unixtime column because its redundant, we already have a datetime column.
+5. Removed Solar Radiation, column was empty for the data set.
+6. 2014-11-05 09:00:00 PST and 2014-11-05 11:00:00 PST rows were missing relative_humidity, dew_Point, and temperature.
+7. Per the formula used in the data for humidex, the caculation will not take place if temperature is under 20 celsius. Entered 0 for all humidex rows with that corresponding temperature. Formula for other cells is: temp + 0.5555 * ((6.11 * 2.71828 ** (5417.753 * ((1/273.16) - (1/(273.15 + dew_point))))) - 10)
+8. Per the formula used in the data for windchill, the calculation will not take place if temperature is above 0 celsius. Entered 0 for all windchill rows with that corresponding temperature.
 
 Notes for Python Cleaning:
 - Wind_gust empty values suggest there was no wind gust that hour.
-- Wind chill empty values can be filled with 0 if the missing values correspond to days when it is not cold.
-- Wind dir and wind dir 10 values can be assumed to be 0 or null, no wind was recorded.
+- Humidex and Windchill missing values will need to be calculated.
 - Will need to be back or front filled:
-	+ Relative_humidity
-	+ dew_point
-	+ temperature 
-	+ humidex
 	+ visibility
 	+ air quality index
 	+ max air temp
