@@ -1,3 +1,4 @@
+test
 The dataset I found is for the weather measurements in Vancouver recorded hourly for the past 90,000 hours (10 years). I am hoping to find trends in the data for the temperatures, specially for the heat in the summer. Perhaps the hot temperatures we have been experiencing happened a few years back. The current independent variable is temperature, but this will be confirmed after the Basic EDA.
 
 https://www.weatherstats.ca/faq/#term-wind-direction
