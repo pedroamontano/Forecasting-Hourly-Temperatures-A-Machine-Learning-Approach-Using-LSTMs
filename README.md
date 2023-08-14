@@ -26,6 +26,13 @@ https://www.weatherstats.ca/faq/#term-wind-direction
 | max_air_temp_pst1hr | float64   | Maximum temperature reached for the hour.                              |
 | min_air_temp_pst1hr | float64   | Minimum temperature reached for the hour.                              |
 
+**Documents in this Project Folder**
+* Capstone - Preliminary EDA Part 1.ipynb: Includes Analysis of Windchill
+* Capstone - Preliminary EDA Part 2.ipynb: Includes Analysis of Humidex
+* Capstone - Preliminary EDA Part 3.ipynb: Includes Monthly, Weekly, and Daily Analysis of Trends, Seasonality, and Residuals.
+* Capstone Project - Cleaning.ipynb: Jupyter Notebook with all the cleaning steps done through python.
+* Excel Clean Log.txt: Log of all cleaning steps taken in Excel.
+* Pedro_Montano_Presentation_Capstone_Sprint_1.pdf: Presentation for Sprint 1 of the Project.
 
 **Tasks**
 - [X] Confirmed Dataset "Vancouver Climate Hourly"
