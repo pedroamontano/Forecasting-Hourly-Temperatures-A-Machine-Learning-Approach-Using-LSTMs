@@ -1,3 +1,10 @@
+Introduction
+
+The data contains weather statistics for Vancouver, which are recorded hourly. The initial data downloaded is for 90,000 hours, roughly 10 years. I am hoping to find trends in the data for the temperatures, especially for extreme weather spikes during the summer and winter. I would like to explore whether these temperature spikes we have been experiencing (like the recent hot days in Vancouver) have happened in the past or if they are unprecedented. The independent variable for this project will be temperature. The hope is that this project will help in predicting extreme weather spikes and help the public prepare for them. This project also has the potential to benefit stores who chose to provide discounts before a weather spike to maximize sales.
+
+Link to Data O[ODownload Page:
+https://www.weatherstats.ca/faq/#term-wind-direction
+
 - [X] Confirmed Dataset "Vancouver Climate Hourly"
 - [X] Preliminary cleanup through Excel.
 - [X] Additional data cleaning through Python.
