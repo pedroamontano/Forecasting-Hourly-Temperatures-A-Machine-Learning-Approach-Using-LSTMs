@@ -27,11 +27,12 @@ https://www.weatherstats.ca/faq/#term-wind-direction
 | min_air_temp_pst1hr | float64   | Minimum temperature reached for the hour.                              |
 
 **Documents in this Project Folder**
-* Capstone - Preliminary EDA Part 1.ipynb: Includes Analysis of Windchill
-* Capstone - Preliminary EDA Part 2.ipynb: Includes Analysis of Humidex
-* Capstone - Preliminary EDA Part 3.ipynb: Includes Monthly, Weekly, and Daily Analysis of Trends, Seasonality, and Residuals.
-* Capstone Project - Cleaning.ipynb: Jupyter Notebook with all the cleaning steps done through python.
-* Excel Clean Log.txt: Log of all cleaning steps taken in Excel.
+* 1 Excel Clean Log.txt: Log of all cleaning steps taken in Excel.
+* 2 Capstone Project - Cleaning.ipynb: Jupyter Notebook with all the cleaning steps done through python.
+* 3 Capstone - Preliminary EDA Part 1.ipynb: Includes Analysis of Windchill
+* 4 Capstone - Preliminary EDA Part 2.ipynb: Includes Analysis of Humidex
+* 5 Capstone - Preliminary EDA Part 3.ipynb: Includes Monthly, Weekly, and Daily Analysis of Trends, Seasonality, and Residuals.
+* 6 Capstone - EDA and Baseline Model
 * Pedro_Montano_Presentation_Capstone_Sprint_1.pdf: Presentation for Sprint 1 of the Project.
 
 **Tasks**
@@ -47,3 +48,4 @@ https://www.weatherstats.ca/faq/#term-wind-direction
 - [ ] Research VAR parameter tuning
 - [ ] Research alternative model for Multivariate Time Series Analysis
 - [ ] Model Evaluation
+- [ ] Research LSTM (RNN) and how to apply it to this project
