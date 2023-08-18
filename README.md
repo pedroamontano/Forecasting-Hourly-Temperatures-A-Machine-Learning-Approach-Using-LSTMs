@@ -39,7 +39,11 @@ https://www.weatherstats.ca/faq/#term-wind-direction
 - [X] Preliminary cleanup through Excel.
 - [X] Additional data cleaning through Python.
 - [X] Initial EDA
-- [ ] Collect and process more data
-- [ ] EDA, analyze correlation between variables
-- [ ] Split data and train AR model
-- [ ] Evaluate models
+- [X] Sprint 1
+- [X] EDA, analyze correlation between variables
+- [X] Split data and fit Linear Regresssion Model
+- [X] Fit Vector Autoregressive Model
+- [ ] Sprint 2
+- [ ] Research VAR parameter tuning
+- [ ] Research alternative model for Multivariate Time Series Analysis
+- [ ] Model Evaluation
