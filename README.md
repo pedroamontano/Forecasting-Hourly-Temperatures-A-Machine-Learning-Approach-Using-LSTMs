@@ -1,4 +1,4 @@
-**Introduction**
+## Introduction
 
 The data contains weather statistics for Vancouver, which are recorded hourly. The initial data downloaded is for 90,000 hours, roughly 10 years. I am hoping to find trends in the data for the temperatures, especially for extreme weather spikes during the summer and winter. I would like to explore whether these temperature spikes we have been experiencing (like the recent hot days in Vancouver) have happened in the past or if they are unprecedented. The independent variable for this project will be temperature. The hope is that this project will help in predicting extreme weather spikes and help the public prepare for them. This project also has the potential to benefit stores who chose to provide discounts before a weather spike to maximize sales. This is a time series project.
 
@@ -6,7 +6,7 @@ Link to Data Download Page:
 https://www.weatherstats.ca/faq/#term-wind-direction
 
 
-**Data Dictionary**
+## Data Dictionary
 |       Column        | Data Type | Description                                                            |
 |---------------------|-----------|------------------------------------------------------------------------|
 | date_time_local     | Date-Time | Index                                                                  |
@@ -26,14 +26,21 @@ https://www.weatherstats.ca/faq/#term-wind-direction
 | max_air_temp_pst1hr | float64   | Maximum temperature reached for the hour.                              |
 | min_air_temp_pst1hr | float64   | Minimum temperature reached for the hour.                              |
 
-**Documents in this Project Folder**
+## Documents in this Repository
+### Cleaning Folder:
 * 1 Excel Clean Log.txt: Log of all cleaning steps taken in Excel.
 * 2 Capstone Project - Cleaning.ipynb: Jupyter Notebook with all the cleaning steps done through python.
+### Exploratory Data Analysis Folder:
 * 3 Capstone - Preliminary EDA Part 1.ipynb: Includes Analysis of Windchill
 * 4 Capstone - Preliminary EDA Part 2.ipynb: Includes Analysis of Humidex
 * 5 Capstone - Preliminary EDA Part 3.ipynb: Includes Monthly, Weekly, and Daily Analysis of Trends, Seasonality, and Residuals.
 * 6 Capstone - EDA and Baseline Model
-* Pedro_Montano_Presentation_Capstone_Sprint_1.pdf: Presentation for Sprint 1 of the Project.
+### Modeling and Evaluation:
+* 7 Modeling - FB Prophet
+* 8 Modeling - LSTM
+### Sprint Presentations:
+* Pedro_Montano_Presentation_Capstone_Sprint_1.pdf
+* Pedro_Montano_Presentation_Capstone_Sprint_2.pdf
 
 **Tasks**
 - [X] Confirmed Dataset "Vancouver Climate Hourly"
@@ -44,8 +51,14 @@ https://www.weatherstats.ca/faq/#term-wind-direction
 - [X] EDA, analyze correlation between variables
 - [X] Split data and fit Linear Regresssion Model
 - [X] Fit Vector Autoregressive Model
-- [ ] Sprint 2
+- [X] Sprint 2
 - [ ] Research VAR parameter tuning
-- [ ] Research alternative model for Multivariate Time Series Analysis
-- [ ] Model Evaluation
-- [ ] Research LSTM (RNN) and how to apply it to this project
+- [X] Research alternative model for Multivariate Time Series Analysis
+- [X] Research how to apply the FB Prophet Model to multivariate analysis.
+- [X] Fit FB Prophet Model on the data adding regressors for the additional variables.
+- [X] Evaluate FB Prophet Model
+- [X] Research LSTM (RNN) and how to apply it to this project
+- [X] Fit LSTM to the data
+- [X] Evaluate LSTM with time series split fro validation
+- [X] Fit final model to be used, LSTM had the best results.
+- [ ] Evaluate the final model on the data using 7 years as training and 3 years as test. 
