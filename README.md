@@ -61,4 +61,9 @@ https://www.weatherstats.ca/faq/#term-wind-direction
 - [X] Fit LSTM to the data
 - [X] Evaluate LSTM with time series split fro validation
 - [X] Fit final model to be used, LSTM had the best results.
-- [ ] Evaluate the final model on the data using 7 years as training and 3 years as test. 
+- [X] Evaluate the final model on the data using 7 years as training and 3 years as test. 
+- [X] Save final model with Dew Point added back in
+- [X] Cleaned code.
+- [X] Reviewed notes for clarity on all notebooks.
+- [X] Added Table of Contents to notebooks 8 and 9.
+- [X] Reviewed visualizations and changed colors to be color blind friendly.
