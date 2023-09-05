@@ -52,7 +52,6 @@ https://www.weatherstats.ca/faq/#term-wind-direction
 - [X] Split data and fit Linear Regresssion Model
 - [X] Fit Vector Autoregressive Model
 - [X] Sprint 2
-- [ ] Research VAR parameter tuning
 - [X] Research alternative model for Multivariate Time Series Analysis
 - [X] Research how to apply the FB Prophet Model to multivariate analysis.
 - [X] Fit FB Prophet Model on the data adding regressors for the additional variables.
@@ -67,3 +66,6 @@ https://www.weatherstats.ca/faq/#term-wind-direction
 - [X] Reviewed notes for clarity on all notebooks.
 - [X] Added Table of Contents to notebooks 8 and 9.
 - [X] Reviewed visualizations and changed colors to be color blind friendly.
+- [X] Sprint 3
+- [ ] Adjust model to accept unscaled weather stats as input.
+- [ ] Create Application to Showcase Model
