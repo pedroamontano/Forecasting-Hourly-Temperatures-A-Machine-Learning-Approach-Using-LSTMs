@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from turtle import width
 import streamlit as st
 import numpy as np
 from tensorflow.keras.models import load_model
@@ -51,7 +52,7 @@ if st.button("Predict"):
     if prediction > 25:
         st.image('Streamlit_App/hot.png')
     elif prediction < 10:
-        st.image('Streamlit_App/cold.png')
+        st.image('Streamlit_App/cold.png', width=300)
 
 # Clear prediction
 if st.button("Clear"):
