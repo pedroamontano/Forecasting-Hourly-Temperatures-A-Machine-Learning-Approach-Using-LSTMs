@@ -14,9 +14,10 @@ def load_resources(scaler_filepath, model_filepath):
 def make_single_prediction(unscaled_data, scaler, model):
     unscaled_data = np.array(unscaled_data).reshape(1, -1)
     scaled_data = scaler.transform(unscaled_data)
-    scaled_data = scaled_data.reshape(1, scaled_data.shape[1], 1)
+    scaled_data = scaled_data.reshape(1, 1, scaled_data.shape[1])
     prediction = model.predict(scaled_data)
     return prediction
+
 
 # Load resources
 scaler, lstm_model = load_resources('Streamlit_App/stdscaler.pkl', 'Streamlit_App/model_6_1_dew.h5')
