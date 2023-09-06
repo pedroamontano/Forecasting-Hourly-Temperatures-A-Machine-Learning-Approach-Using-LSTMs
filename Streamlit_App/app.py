@@ -5,6 +5,7 @@ import streamlit as st
 import numpy as np
 from tensorflow.keras.models import load_model
 import joblib
+from PIL import Image
 
 # Function to load saved resources
 def load_resources(scaler_filepath, model_filepath):
@@ -49,10 +50,19 @@ if st.button("Predict"):
     prediction = make_single_prediction(features, scaler, lstm_model)
     st.write(f"Prediction: {prediction}")
 
+    # if prediction > 25:
+    #     st.image('Streamlit_App/hot.png')
+    # elif prediction < 10:
+    #     st.image('Streamlit_App/cold.png')
     if prediction > 25:
-        st.image('Streamlit_App/hot.png')
+        img = Image.open('image_for_above_25.jpg')
+        img = img.resize((300, 300))  # Resizing to 300x200 pixels
+        st.image(img, caption='Hot Weather')
     elif prediction < 10:
-        st.image('Streamlit_App/cold.png', width=300)
+        img = Image.open('image_for_below_10.jpg')
+        img = img.resize((300, 300))  # Resizing to 300x200 pixels
+        st.image(img, caption='Cold Weather')
+
 
 # Clear prediction
 if st.button("Clear"):
