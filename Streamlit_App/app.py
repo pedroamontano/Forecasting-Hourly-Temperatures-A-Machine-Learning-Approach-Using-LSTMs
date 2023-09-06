@@ -59,7 +59,7 @@ if st.button("Predict"):
 if prediction > 25:
     hot = image_to_base64('Streamlit_App/hot.png')
     st.markdown(
-        f"<div style='text-align: right'><img src='data:image/png;base64,{hot}'></div>",
+        f"<div style='text-align: right'><img src='data:image/png;base64,{hot}' style='width:200px;height:200px;'></div>",
         unsafe_allow_html=True,
     )
 
@@ -67,7 +67,7 @@ if prediction > 25:
 if prediction < 10:
     cold = image_to_base64('Streamlit_App/cold.png')
     st.markdown(
-        f"<div style='text-align: right'><img src='data:image/png;base64,{cold}'></div>",
+        f"<div style='text-align: right'><img src='data:image/png;base64,{cold}' style='width:200px;height:200px;'></div>",
         unsafe_allow_html=True,
     )
 
