@@ -54,11 +54,11 @@ if st.button("Predict"):
     # elif prediction < 10:
     #     st.image('Streamlit_App/cold.png')
     if prediction > 25:
-        img = Image.open('image_for_above_25.jpg')
+        img = Image.open('Streamlit_App/hot.png')
         img = img.resize((300, 300))  # Resizing to 300x200 pixels
         st.image(img, caption='Hot Weather')
     elif prediction < 10:
-        img = Image.open('image_for_below_10.jpg')
+        img = Image.open('Streamlit_App/cold.png')
         img = img.resize((300, 300))  # Resizing to 300x200 pixels
         st.image(img, caption='Cold Weather')
 
