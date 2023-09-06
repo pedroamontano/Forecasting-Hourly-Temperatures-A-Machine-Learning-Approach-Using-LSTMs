@@ -1,5 +1,4 @@
-import os
-os.chdir('1Data Science/Capstone/caprepo/Streamlit App')
+#!/usr/bin/env python3
 
 import streamlit as st
 import numpy as np
