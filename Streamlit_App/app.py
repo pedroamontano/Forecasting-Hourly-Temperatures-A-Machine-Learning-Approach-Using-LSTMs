@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+import os
+print("Current working directory:", os.getcwd())
+print("Files in current directory:", os.listdir('.'))
+
 import streamlit as st
 import numpy as np
 from tensorflow.keras.models import load_model
