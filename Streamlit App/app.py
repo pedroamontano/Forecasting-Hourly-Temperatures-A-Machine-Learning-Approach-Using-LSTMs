@@ -1,3 +1,6 @@
+import os
+os.chdir('1Data Science/Capstone/caprepo/Streamlit App')
+
 import streamlit as st
 import numpy as np
 from tensorflow.keras.models import load_model
