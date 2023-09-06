@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-
-import os
-os.chdir('/1Data Science/Capstone/caprepo/Streamlit_App')
-
 import streamlit as st
 import numpy as np
 from tensorflow.keras.models import load_model
@@ -23,7 +19,8 @@ def make_single_prediction(unscaled_data, scaler, model):
     return prediction
 
 # Load resources
-scaler, lstm_model = load_resources('stdscaler.pkl', 'model_6_1_dew.h5')
+scaler, lstm_model = load_resources('Streamlit_App/stdscaler.pkl', 'Streamlit_App/model_6_1_dew.h5')
+
 
 # Streamlit app
 st.title("LSTM Model Prediction")
