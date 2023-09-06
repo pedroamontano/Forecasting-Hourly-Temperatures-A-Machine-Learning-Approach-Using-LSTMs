@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from turtle import width
 import streamlit as st
 import numpy as np
 from tensorflow.keras.models import load_model
