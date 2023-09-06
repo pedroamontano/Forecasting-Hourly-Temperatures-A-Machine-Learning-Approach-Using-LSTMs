@@ -35,8 +35,7 @@ scaler, lstm_model = load_resources('Streamlit_App/stdscaler.pkl', 'Streamlit_Ap
 # Streamlit app
 st.title("LSTM Model Prediction")
 
-if 'prediction' not in st.session_state:
-    st.session_state['prediction'] = None
+prediction = None
 
 # Get user input
 pressure_station = st.number_input("Pressure Station:", value=0.0)
@@ -56,31 +55,21 @@ if st.button("Predict"):
     prediction = make_single_prediction(features, scaler, lstm_model)
     st.write(f"Prediction: {prediction}")
 
-if prediction > 25:
-    hot = image_to_base64('Streamlit_App/hot.png')
-    st.markdown(
-        f"<div style='text-align: right'><img src='data:image/png;base64,{hot}' style='width:200px;height:200px;'></div>",
-        unsafe_allow_html=True,
-    )
+if prediction is not None:
+    if prediction > 25:
+        hot = image_to_base64('Streamlit_App/hot.png')
+        st.markdown(
+            f"<div style='text-align: right'><img src='data:image/png;base64,{hot}' style='width:200px;height:200px;'></div>",
+            unsafe_allow_html=True,
+        )
 
-    
-if prediction < 10:
-    cold = image_to_base64('Streamlit_App/cold.png')
-    st.markdown(
-        f"<div style='text-align: right'><img src='data:image/png;base64,{cold}' style='width:200px;height:200px;'></div>",
-        unsafe_allow_html=True,
-    )
-
-    # if prediction > 25:
-    #     img = Image.open('Streamlit_App/hot.png')
-    #     img = img.resize((200, 200))  # Resizing to 300x200 pixels
-    #     st.image(img, caption='Hot Weather')
-    # elif prediction < 10:
-    #     img = Image.open('Streamlit_App/cold.png')
-    #     img = img.resize((200, 200))  # Resizing to 300x200 pixels
-    #     st.image(img, caption='Cold Weather')
-
-
+    if prediction < 10:
+        cold = image_to_base64('Streamlit_App/cold.png')
+        st.markdown(
+            f"<div style='text-align: right'><img src='data:image/png;base64,{cold}' style='width:200px;height:200px;'></div>",
+            unsafe_allow_html=True,
+        )
+        
 # Clear prediction
 if st.button("Clear"):
     st.session_state['prediction'] = None
