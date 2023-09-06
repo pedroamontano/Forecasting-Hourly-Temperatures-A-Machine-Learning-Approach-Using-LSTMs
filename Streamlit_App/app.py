@@ -27,6 +27,9 @@ scaler, lstm_model = load_resources('Streamlit_App/stdscaler.pkl', 'Streamlit_Ap
 # Streamlit app
 st.title("LSTM Model Prediction")
 
+if 'prediction' not in st.session_state:
+    st.session_state['prediction'] = None
+
 # Get user input
 pressure_station = st.number_input("Pressure Station:", value=0.0)
 wind_speed = st.number_input("Wind Speed:", value=0.0)
@@ -49,3 +52,8 @@ if st.button("Predict"):
         st.image('Streamlit_App/hot.png')
     elif prediction < 10:
         st.image('Streamlit_App/cold.png')
+
+# Clear prediction
+if st.button("Clear"):
+    st.session_state['prediction'] = None
+    st.write("Prediction cleared.")
