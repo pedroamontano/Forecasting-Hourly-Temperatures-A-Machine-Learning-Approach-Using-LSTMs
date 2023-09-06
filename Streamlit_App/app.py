@@ -5,6 +5,13 @@ import numpy as np
 from tensorflow.keras.models import load_model
 import joblib
 from PIL import Image
+import base64
+
+def image_to_base64(img_path):
+    with open(img_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode()
+
+img_base64 = image_to_base64('Streamlit_App/hot.png')
 
 # Function to load saved resources
 def load_resources(scaler_filepath, model_filepath):
@@ -49,18 +56,22 @@ if st.button("Predict"):
     prediction = make_single_prediction(features, scaler, lstm_model)
     st.write(f"Prediction: {prediction}")
 
-    # if prediction > 25:
-    #     st.image('Streamlit_App/hot.png')
-    # elif prediction < 10:
-    #     st.image('Streamlit_App/cold.png')
     if prediction > 25:
-        img = Image.open('Streamlit_App/hot.png')
-        img = img.resize((300, 300))  # Resizing to 300x200 pixels
-        st.image(img, caption='Hot Weather')
-    elif prediction < 10:
-        img = Image.open('Streamlit_App/cold.png')
-        img = img.resize((300, 300))  # Resizing to 300x200 pixels
-        st.image(img, caption='Cold Weather')
+    hot = image_to_base64('Streamlit_App/hot.png')
+    st.markdown(f"<div style='text-align: right'><img src='data:image/png;base64,{hot}'></div>",unsafe_allow_html=True,)
+    
+    if prediction < 10:
+    cold = image_to_base64('Streamlit_App/cold.png')
+    st.markdown(f"<div style='text-align: right'><img src='data:image/png;base64,{cold}'></div>",unsafe_allow_html=True,)
+
+    # if prediction > 25:
+    #     img = Image.open('Streamlit_App/hot.png')
+    #     img = img.resize((200, 200))  # Resizing to 300x200 pixels
+    #     st.image(img, caption='Hot Weather')
+    # elif prediction < 10:
+    #     img = Image.open('Streamlit_App/cold.png')
+    #     img = img.resize((200, 200))  # Resizing to 300x200 pixels
+    #     st.image(img, caption='Cold Weather')
 
 
 # Clear prediction
