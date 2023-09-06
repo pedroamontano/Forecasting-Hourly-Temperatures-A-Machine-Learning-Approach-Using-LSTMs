@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import streamlit as st
 import numpy as np
 from tensorflow.keras.models import load_model
@@ -43,3 +44,8 @@ if st.button("Predict"):
     features = [pressure_station, wind_speed, wind_gust, relative_humidity, dew_point, windchill, humidex, visibility, health_index, cloud_okta]
     prediction = make_single_prediction(features, scaler, lstm_model)
     st.write(f"Prediction: {prediction}")
+
+    if prediction > 25:
+        st.image('Streamlit_App/hot.png')
+    elif prediction < 10:
+        st.image('Streamlit_App/cold.png')
