@@ -67,7 +67,7 @@ if selected == 'Predictions':
     if st.button("Predict"):
         features = [pressure_station, wind_speed, wind_gust, relative_humidity, dew_point, windchill, humidex, visibility, health_index, cloud_okta]
         prediction = make_single_prediction(features, scaler, lstm_model)
-        st.write(f"Prediction: {prediction[0][0].round(2)}ºC")
+        st.write(f"Prediction: {prediction.round(2)}ºC")
 
     if prediction is not None:
         if prediction > 25:
