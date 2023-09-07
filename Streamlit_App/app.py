@@ -46,7 +46,7 @@ if selected == 'Title':
     st.image('Streamlit_App/Title.jpg', use_column_width=True)
 
 # Overview screen
-if selected == 'Predictions}':
+if selected == 'Predictions':
     st.title("LSTM Model Prediction")
 
     prediction = None
