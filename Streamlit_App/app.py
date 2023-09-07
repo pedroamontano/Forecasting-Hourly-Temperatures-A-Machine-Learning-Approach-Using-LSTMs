@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import streamlit as st
-from streamlit_option_menu import option_menu
+from streamlit-option-menu import option_menu
 import numpy as np
 from tensorflow.keras.models import load_model
 import joblib
