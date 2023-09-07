@@ -1,5 +1,5 @@
 streamlit
-streamlit_option_menu
+streamlit-option-menu
 numpy
 tensorflow
 joblib
