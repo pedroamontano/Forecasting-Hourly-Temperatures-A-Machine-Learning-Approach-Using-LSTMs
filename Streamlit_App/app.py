@@ -40,7 +40,7 @@ selected = option_menu(
     menu_icon='cast',
     default_index=0,
     orientation='horizontal'
-)
+    )
 # Overview screen
 if selected == 'Title':
     st.image('Streamlit_App/Title.jpg', use_column_width=True)
