@@ -52,16 +52,16 @@ if selected == 'Predictions':
     prediction = None
 
     # Get user input
-    pressure_station = st.number_input("Pressure Station:", value=0.0)
-    wind_speed = st.number_input("Wind Speed:", value=0.0)
-    wind_gust = st.number_input("Wind Gust:", value=0.0)
-    relative_humidity = st.number_input("Relative Humidity:", value=0.0)
-    dew_point = st.number_input("Dew Point:", value=0.0)
-    windchill = st.number_input("Windchill:", value=0.0)
-    humidex = st.number_input("Humidex:", value=0.0)
-    visibility = st.number_input("Visibility:", value=0.0)
-    health_index = st.number_input("Health Index:", value=0.0)
-    cloud_okta = st.number_input("Cloud Okta:", value=0.0)
+    pressure_station = st.text_input("Pressure Station:", value=0.0)
+    wind_speed = st.text_input("Wind Speed:", value=0.0)
+    wind_gust = st.text_input("Wind Gust:", value=0.0)
+    relative_humidity = st.text_input("Relative Humidity:", value=0.0)
+    dew_point = st.text_input("Dew Point:", value=0.0)
+    windchill = st.text_input("Windchill:", value=0.0)
+    humidex = st.text_input("Humidex:", value=0.0)
+    visibility = st.text_input("Visibility:", value=0.0)
+    health_index = st.text_input("Health Index:", value=0.0)
+    cloud_okta = st.text_input("Cloud Okta:", value=0.0)
 
     # Make prediction
     if st.button("Predict"):
