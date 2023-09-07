@@ -1,6 +1,6 @@
 streamlit
+streamlit_option_menu
 numpy
 tensorflow
 joblib
 scikit-learn
-streamlit_option_menu
