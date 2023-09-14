@@ -29,20 +29,27 @@ https://www.weatherstats.ca/faq/#term-wind-direction
 ## Documents in this Repository
 ### Cleaning Folder:
 * 1 Excel Clean Log.txt: Log of all cleaning steps taken in Excel.
-* 2 Capstone Project - Cleaning.ipynb: Jupyter Notebook with all the cleaning steps done through python.
+* 2 Data Cleaning: Jupyter Notebook with all the cleaning steps done through python.
 ### Exploratory Data Analysis Folder:
-* 3 Capstone - Preliminary EDA Part 1.ipynb: Includes Analysis of Windchill
-* 4 Capstone - Preliminary EDA Part 2.ipynb: Includes Analysis of Humidex
-* 5 Capstone - Preliminary EDA Part 3.ipynb: Includes Monthly, Weekly, and Daily Analysis of Trends, Seasonality, and Residuals.
-* 6 Capstone - EDA and Baseline Model
+* 3 Preliminary EDA Part 1.ipynb: Includes Analysis of Windchill
+* 4 Preliminary EDA Part 2.ipynb: Includes Analysis of Humidex
+* 5 Preliminary EDA Part 3.ipynb: Includes Monthly, Weekly, and Daily Analysis of Trends, Seasonality, and Residuals.
+* 6 Exploratory Data Analysis.ipynb: Analysis of Individual Variables and Correlation
 ### Modeling and Evaluation:
+* 7 Baseline Modeling and Evaluation Metrics: Linear Regression and Vector Autogressive Model
 * 7 Modeling - FB Prophet
 * 8 Modeling - LSTM
 ### Sprint Presentations:
 * Pedro_Montano_Presentation_Capstone_Sprint_1.pdf
 * Pedro_Montano_Presentation_Capstone_Sprint_2.pdf
+* Pedro_Montano_Presentation_Capstone_Sprint_3.pdf
+### Streamlit_App:
+* app.py: Python script for the streamlit app temperature prediction prototype.
+* images LSTM, Title, cold, and hot: used as visuals in the demo.
+* model_6_1_dew.h5: LSTM model trained with weather statistics from 2013-07-01 through 2020-06-30.
+* stdscaler.pkl: Standard Scaler used for the model. Used to scale new inputs for the prediction.
 
-**Tasks**
+**Task List**
 - [X] Confirmed Dataset "Vancouver Climate Hourly"
 - [X] Preliminary cleanup through Excel.
 - [X] Additional data cleaning through Python.
@@ -67,5 +74,5 @@ https://www.weatherstats.ca/faq/#term-wind-direction
 - [X] Added Table of Contents to notebooks 8 and 9.
 - [X] Reviewed visualizations and changed colors to be color blind friendly.
 - [X] Sprint 3
-- [ ] Adjust model to accept unscaled weather stats as input.
-- [ ] Create Application to Showcase Model
+- [X] Adjust model to accept unscaled weather stats as input.
+- [X] Create Application to Showcase Model
