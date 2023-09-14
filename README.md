@@ -1,10 +1,17 @@
 ## Introduction
 
-The data contains weather statistics for Vancouver, which are recorded hourly. The initial data downloaded is for 90,000 hours, roughly 10 years. I am hoping to find trends in the data for the temperatures, especially for extreme weather spikes during the summer and winter. I would like to explore whether these temperature spikes we have been experiencing (like the recent hot days in Vancouver) have happened in the past or if they are unprecedented. The independent variable for this project will be temperature. The hope is that this project will help in predicting extreme weather spikes and help the public prepare for them. This project also has the potential to benefit stores who chose to provide discounts before a weather spike to maximize sales. This is a time series project.
+The data contains weather statistics for Vancouver, which are recorded hourly. The initial data downloaded is for 90,000 hours, roughly 10 years. I am hoping to find trends in the data for the temperatures, especially for extreme weather spikes during the summer and winter. I would like to explore whether these temperature spikes we have been experiencing (like the recent hot days in Vancouver) have happened in the past or if they are unprecedented. The target variable for this project will be temperature. The hope is that this project will help in predicting extreme weather spikes and help the public prepare for them. This project also has the potential to benefit businesses in their sales of seasonal products. This is a multivariate time series project.
 
 Link to Data Download Page:
-https://www.weatherstats.ca/faq/#term-wind-direction
+https://vancouver.weatherstats.ca/download.html
 
+## Observations
+* Alone, each variable generally does not have a strong correlation to the temperature. For example, pressure could rise by a few kPa and the temperature would not be affected.
+* The one variable that does have a strong correlation with temperature is Dew Point. This was added into the final model after tuning to increase the accuracy of the predictions.
+* After the Exploratory Data Analysis and several experiments through different models, the model picked for the temperature predictions is LSTM. This Recurrent Neural Network provided the closest predictions to the hottest and coldest hours in Vancouver. 
+* Temperature extremes are still outliers and the model is not able to predict them with complete accuracy. 
+* The model does perform well with more common temperatures, even with completely new data. 
+* Currently, the model is able to predict the temperature considering the weather statistics from the previous hour. The streamlit app in this repository has a working prototype. 
 
 ## Data Dictionary
 |       Column        | Data Type | Description                                                            |
@@ -49,7 +56,7 @@ https://www.weatherstats.ca/faq/#term-wind-direction
 * model_6_1_dew.h5: LSTM model trained with weather statistics from 2013-07-01 through 2020-06-30.
 * stdscaler.pkl: Standard Scaler used for the model. Used to scale new inputs for the prediction.
 
-**Task List**
+## **Task List**
 - [X] Confirmed Dataset "Vancouver Climate Hourly"
 - [X] Preliminary cleanup through Excel.
 - [X] Additional data cleaning through Python.
@@ -76,3 +83,9 @@ https://www.weatherstats.ca/faq/#term-wind-direction
 - [X] Sprint 3
 - [X] Adjust model to accept unscaled weather stats as input.
 - [X] Create Application to Showcase Model
+
+## **Next Steps**
+- [ ] Pull 10 to 20 more years of data and cleanup. Also add July and August 2023 to the data.
+- [ ] Update and train model with new data.
+- [ ] Experiment on additional time steps for LSTM to attempt to increase the prediction window for temperature.
+- [ ] Continue to research additional models should they be applicable to this multivariate time series analysis.
